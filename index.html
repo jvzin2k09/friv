@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161b2e"><meta name="description" content="Uma coleção de jogos para descobrir e jogar.">
+  <title>Playroom — jogos para jogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=2">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Playroom, início"><span class="brand-mark">P</span><span>playroom<span class="brand-dot">.</span></span></a>
+    <nav class="main-nav" aria-label="Navegação"><button class="nav-btn active" data-target="biblioteca">Explorar</button><button class="nav-btn" data-target="enviar">Enviar jogo</button></nav>
+    <button class="cta-btn" id="publishBtn">+ Publicar jogo</button>
+  </header>
+  <main class="page-shell" id="inicio">
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow"><i></i> ARCADE DA COMUNIDADE</span><h1>Seu próximo<br>jogo favorito <em>está aqui.</em></h1><p>Uma coleção independente de jogos para descobrir, experimentar e compartilhar.</p><div class="hero-actions"><button class="primary-action" id="exploreBtn">Explorar jogos <span>↓</span></button><button class="secondary-action" id="heroUploadBtn">Enviar um jogo</button></div><div class="hero-note"><span class="live-dot"></span><span id="gamesCounter">0</span> jogos na biblioteca</div></div>
+      <div class="hero-art" aria-label="Ilustração de um controle de videogame"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="game-tile tile-back">✦</div><div class="game-tile tile-front"><span class="dpad">✣</span><span class="buttons">●　●</span><small>PLAY<br>ANYTHING</small></div><span class="spark spark-a">✳</span><span class="spark spark-b">✦</span><span class="art-caption">PRESS START<br>AND HAVE FUN</span></div>
+    </section>
+    <section class="library" id="biblioteca"><div class="section-heading"><div><span class="eyebrow">A COLEÇÃO</span><h2>Escolha sua próxima aventura</h2></div><label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar jogos" aria-label="Buscar jogos"></label></div>
+      <div class="filters" aria-label="Filtrar jogos"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="HTML">HTML</button><button class="filter" data-filter="ZIP">ZIP</button><button class="filter" data-filter="Link">Links</button></div>
+      <div class="game-grid" id="gameGrid"><article class="empty-state"><div class="empty-art">＋</div><h3>A biblioteca começa com você</h3><p>Adicione um jogo em HTML, um pacote ZIP ou um link para começar.</p><button class="text-action" id="emptyUploadBtn">Adicionar o primeiro jogo <span>→</span></button></article></div>
+    </section>
+    <section class="upload-section" id="enviar"><div class="upload-copy"><span class="eyebrow">FEITO POR VOCÊ</span><h2>Tem um jogo?<br><em>Coloque ele no ar.</em></h2><p>Envie um HTML, um ZIP com os arquivos do jogo ou compartilhe um link público.</p></div><div class="upload-box" id="uploadBox"><input id="gameUploader" type="file" accept=".zip,.html,.htm" multiple><div class="upload-symbol">↑</div><h3>Solte seus arquivos aqui</h3><p>ou <label for="gameUploader" class="browse-link">procure no dispositivo</label></p><small>HTML ou ZIP · até 100 MB por arquivo</small><button class="link-upload" id="linkUploadBtn" type="button">Adicionar por link <span>↗</span></button></div></section>
+    <footer><a class="brand" href="#inicio"><span class="brand-mark">P</span><span>playroom<span class="brand-dot">.</span></span></a><span>Feito para jogar. Feito para compartilhar.</span></footer>
+  </main>
+  <dialog id="linkDialog"><form method="dialog" id="linkForm"><button class="dialog-close" value="cancel" aria-label="Fechar">×</button><span class="eyebrow">ADICIONAR JOGO</span><h2>Compartilhe um link</h2><label>Nome do jogo<input id="linkName" required maxlength="60" placeholder="Ex.: Meu jogo incrível"></label><label>URL do jogo<input id="linkUrl" type="url" required placeholder="https://exemplo.com/jogo"></label><p class="dialog-note">O link será aberto no player. Alguns sites bloqueiam incorporação; nesse caso use “Abrir em nova aba”.</p><div class="dialog-actions"><button class="secondary-action" value="cancel">Cancelar</button><button class="primary-action" id="saveLinkBtn" value="default">Adicionar jogo</button></div></form></dialog>
+  <section class="player" id="player" aria-label="Player de jogos" hidden><div class="player-bar"><div><span class="eyebrow">AGORA JOGANDO</span><h2 id="activeGameTitle">Jogo</h2></div><div class="player-actions"><a id="openExternal" target="_blank" rel="noopener noreferrer" hidden>Abrir em nova aba ↗</a><button id="fullscreenBtn">Tela cheia ⛶</button><button id="closePlayer" aria-label="Fechar player">×</button></div></div><div class="game-screen"><iframe id="gameFrame" title="Jogo selecionado" sandbox="allow-scripts allow-forms allow-pointer-lock allow-popups" allow="fullscreen; autoplay" allowfullscreen></iframe></div></section>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script><script src="./script.js?v=2"></script>
+</body></html>

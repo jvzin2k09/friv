@@ -1,0 +1,21 @@
+{
+  "name": "friv",
+  "version": "1.0.0",
+  "description": "Uma arcade estática para navegar e testar jogos enviados pela comunidade.",
+  "homepage": "https://github.com/jvzin2k09/friv#readme",
+  "bugs": {
+    "url": "https://github.com/jvzin2k09/friv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvzin2k09/friv.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
