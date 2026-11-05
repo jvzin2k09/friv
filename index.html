@@ -6,7 +6,7 @@
   <title>Playroom — escolha seu próximo jogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=3">
+  <link rel="stylesheet" href="./style.css?v=5">
 </head>
 <body>
   <header class="topbar">
@@ -37,12 +37,13 @@
     <section id="uploadPage" class="app-page upload-page" hidden>
       <div class="upload-heading"><button class="back-link" id="uploadBack">← Voltar para explorar</button><span class="eyebrow">FEITO POR VOCÊ</span><h1>Tem um jogo?<br><em>Coloque ele no ar.</em></h1><p>Envie um HTML, um ZIP com os arquivos do jogo ou compartilhe um link público.</p></div>
       <div class="upload-box" id="uploadBox"><input id="gameUploader" type="file" accept=".zip,.html,.htm" multiple><div class="upload-symbol">↑</div><h3>Solte seus arquivos aqui</h3><p>ou <label for="gameUploader" class="browse-link">procure no dispositivo</label></p><small>HTML ou ZIP · até 100 MB por arquivo</small><button class="link-upload" id="linkUploadBtn" type="button">Adicionar por link <span>↗</span></button></div>
+      <div class="logo-picker"><input id="gameLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml,image/gif"><label for="gameLogo"><span class="logo-preview" id="logoPreview">＋</span><span class="logo-picker-copy"><strong>Logo do jogo <small>Opcional · PNG, JPG, WEBP, SVG ou GIF</small></strong></span><span class="logo-choose">Escolher logo</span></label><button type="button" id="clearLogoBtn" hidden>Remover</button></div>
       <div class="upload-footnote">Os jogos enviados aparecem na sua biblioteca durante esta sessão.</div>
     </section>
   </main>
 
   <section class="player" id="player" aria-label="Player de jogos" hidden><div class="player-bar"><div><span class="eyebrow">AGORA JOGANDO</span><h2 id="activeGameTitle">Jogo</h2></div><div class="player-actions"><a id="openExternal" target="_blank" rel="noopener noreferrer" hidden>Abrir em nova aba ↗</a><button id="fullscreenBtn">Tela cheia ⛶</button><button id="closePlayer" aria-label="Fechar player">×</button></div></div><div class="game-screen"><iframe id="gameFrame" title="Jogo selecionado" sandbox="allow-scripts allow-forms allow-pointer-lock allow-popups" allow="fullscreen; autoplay" allowfullscreen></iframe></div></section>
-  <dialog id="linkDialog"><form method="dialog" id="linkForm"><button class="dialog-close" value="cancel" aria-label="Fechar">×</button><span class="eyebrow">ADICIONAR JOGO</span><h2>Compartilhe um link</h2><label>Nome do jogo<input id="linkName" required maxlength="60" placeholder="Ex.: Meu jogo incrível"></label><label>URL do jogo<input id="linkUrl" type="url" required placeholder="https://exemplo.com/jogo"></label><p class="dialog-note">Alguns sites bloqueiam incorporação. Se isso acontecer, use “Abrir em nova aba”.</p><div class="dialog-actions"><button class="secondary-action" value="cancel">Cancelar</button><button class="primary-action" id="saveLinkBtn" value="default">Adicionar jogo</button></div></form></dialog>
+  <dialog id="linkDialog"><form method="dialog" id="linkForm"><button class="dialog-close" value="cancel" aria-label="Fechar">×</button><span class="eyebrow">ADICIONAR JOGO</span><h2>Compartilhe um link</h2><label>Nome do jogo<input id="linkName" required maxlength="60" placeholder="Ex.: Meu jogo incrível"></label><label>URL do jogo<input id="linkUrl" type="url" required placeholder="https://exemplo.com/jogo"></label><label class="logo-dialog-label">Logo do jogo (opcional)<input id="linkLogo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml,image/gif"></label><p class="dialog-note">Alguns sites bloqueiam incorporação. Se isso acontecer, use “Abrir em nova aba”.</p><div class="dialog-actions"><button class="secondary-action" value="cancel">Cancelar</button><button class="primary-action" id="saveLinkBtn" value="default">Adicionar jogo</button></div></form></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script><script src="./script.js?v=4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script><script src="./script.js?v=9"></script>
 </body></html>

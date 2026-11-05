@@ -4,13 +4,13 @@ Arcade com catálogo de jogos em destaque, páginas de detalhes e envio de jogos
 
 ## Como usar
 
-Inicie o projeto com `npm start` e acesse `http://localhost:8000`. A página inicial mostra jogos em destaque; clique em uma capa para ver os detalhes e abrir o jogo na plataforma correspondente. Use “Enviar jogo” para adicionar um HTML, um ZIP, arraste o arquivo para a área ou compartilhe uma URL HTTP/HTTPS.
+Inicie o projeto com `npm start` e acesse `http://localhost:8000`. A página inicial mostra jogos em destaque; clique em uma capa para ver os detalhes e abrir o jogo na plataforma correspondente. Use “Enviar jogo” para adicionar um HTML ou ZIP, escolha opcionalmente uma logo PNG/JPG/WEBP/SVG/GIF de até 5 MB, arraste o arquivo para a área ou compartilhe uma URL HTTP/HTTPS. A logo aparece na capa do card e nos detalhes.
 
 - **HTML:** jogo em uma página, com CSS e JavaScript incorporados.
 - **ZIP:** inclua um `index.html` (na raiz ou em uma subpasta) e os recursos usados pelo jogo. O site localiza imagens, scripts e folhas de estilo referenciados por caminhos relativos no HTML.
 - **Link:** abre no player incorporado. Alguns sites impedem incorporação em iframe; o botão “Abrir em nova aba” fica disponível para esses casos.
 
-Os jogos de exemplo abrem as páginas das plataformas correspondentes; PAC-MAN abre o Doodle jogável do Google. Jogos HTML/ZIP enviados são executados no player e a biblioteca de uploads dura até recarregar a página. Os arquivos são processados no navegador e não são enviados ao servidor.
+Os jogos de exemplo abrem as páginas das plataformas correspondentes; PAC-MAN abre o Doodle jogável do Google. Jogos HTML, ZIP e links enviados ficam salvos no banco local `data/games.json`; os arquivos e logos ficam em `data/uploads/` e continuam na biblioteca depois de fechar e abrir o site. Faça uma cópia da pasta `data/` para backup. O servidor local recebe os arquivos para armazená-los.
 
 ## Dependências externas
 
@@ -28,7 +28,7 @@ npm start
 
 Depois acesse `http://localhost:8000`. Para usar outra porta, defina a variável de ambiente `PORT` antes de iniciar.
 
-As imagens de capa usadas nos exemplos ficam na pasta `games/`.
+As imagens de capa usadas nos exemplos ficam na pasta `games/`. Os envios ficam na pasta `data/`, ignorada pelo Git para não publicar arquivos pessoais junto com o código.
 
 ## Créditos das capas
 
