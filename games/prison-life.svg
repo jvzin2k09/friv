@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+  <title id="title">Prison Life</title>
+  <desc id="desc">Arte original para o jogo Prison Life, com personagens em uma prisão estilizada.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#51d0f0"/><stop offset="1" stop-color="#2671bf"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#727b88"/><stop offset="1" stop-color="#303745"/></linearGradient>
+    <linearGradient id="orange" x2="0" y2="1"><stop stop-color="#ffae3b"/><stop offset="1" stop-color="#e45b26"/></linearGradient>
+    <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#4da9ff"/><stop offset="1" stop-color="#214baf"/></linearGradient>
+  </defs>
+  <rect width="720" height="480" fill="url(#sky)"/>
+  <path d="M0 286h720v194H0z" fill="url(#floor)"/>
+  <path d="M0 297 160 220h400l160 77v26H0z" fill="#d7dce0"/>
+  <path d="M65 214h185v80H65zM470 214h185v80H470z" fill="#eef1f0"/>
+  <path d="M78 225h158v59H78zM484 225h158v59H484z" fill="#93d7e7"/>
+  <path d="M95 232v48m24-48v48m24-48v48m24-48v48m24-48v48m24-48v48M500 232v48m24-48v48m24-48v48m24-48v48m24-48v48m24-48v48" stroke="#eef7f7" stroke-width="7" opacity=".9"/>
+  <path d="M0 310h720" stroke="#252d3a" stroke-width="14"/>
+  <ellipse cx="357" cy="414" rx="226" ry="22" fill="#222a36" opacity=".4"/>
+  <!-- inmate -->
+  <g transform="translate(245 130)">
+    <path d="M40 107h107l22 143H18z" fill="url(#orange)" stroke="#9e492f" stroke-width="8"/>
+    <path d="m73 116 20 28 22-28" fill="none" stroke="#fff0ca" stroke-width="8"/>
+    <rect x="62" y="37" width="78" height="84" rx="28" fill="#f4bd90" stroke="#773f3b" stroke-width="8"/>
+    <path d="M67 75q10-17 22 0m21 0q10-17 22 0" fill="none" stroke="#30323e" stroke-width="7" stroke-linecap="round"/>
+    <path d="M87 100q16 12 32 0" fill="none" stroke="#873f39" stroke-width="6" stroke-linecap="round"/>
+    <path d="m38 137-32 80m139-80 35 63" stroke="#f4bd90" stroke-width="22" stroke-linecap="round"/>
+    <path d="M44 248v45m94-45v45" stroke="#263c60" stroke-width="25" stroke-linecap="round"/>
+    <path d="M23 295h39m62 0h39" stroke="#f4eee5" stroke-width="17" stroke-linecap="round"/>
+    <rect x="69" y="156" width="59" height="30" rx="5" fill="#ffe9af"/><text x="98" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#57423b">PRISONER</text>
+  </g>
+  <!-- guard -->
+  <g transform="translate(436 139)">
+    <path d="M39 108h105l19 140H18z" fill="url(#blue)" stroke="#243f85" stroke-width="8"/>
+    <path d="M83 112 93 141l14-29" fill="#f4f4f0" stroke="#d7dfed" stroke-width="4"/>
+    <rect x="56" y="39" width="78" height="82" rx="28" fill="#e9b187" stroke="#693c34" stroke-width="8"/>
+    <path d="M49 67q4-37 48-40 41 2 47 40z" fill="#253866" stroke="#172746" stroke-width="7"/><path d="M56 66h80" stroke="#d9e8ff" stroke-width="8"/>
+    <circle cx="80" cy="82" r="4" fill="#20283b"/><circle cx="111" cy="82" r="4" fill="#20283b"/><path d="M83 103q13 8 25 0" fill="none" stroke="#793f37" stroke-width="5" stroke-linecap="round"/>
+    <path d="m39 137-27 62m135-62 34 42" stroke="#e9b187" stroke-width="20" stroke-linecap="round"/>
+    <rect x="125" y="167" width="81" height="13" rx="6" transform="rotate(-22 125 167)" fill="#202a37"/><rect x="184" y="126" width="22" height="19" rx="3" fill="#303b4a"/>
+    <path d="M44 246v48m91-48v48" stroke="#182a50" stroke-width="25" stroke-linecap="round"/><path d="M23 296h40m58 0h37" stroke="#202632" stroke-width="17" stroke-linecap="round"/>
+    <path d="M87 153h25v25H87z" fill="#ffd44f" stroke="#d8a628" stroke-width="3"/><path d="m99 158 5 7-5 8-5-8z" fill="#fff4bb"/>
+  </g>
+  <!-- bars and signage -->
+  <rect x="18" y="18" width="240" height="54" rx="12" fill="#111b35" opacity=".9"/>
+  <text x="138" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#fff">PRISON <tspan fill="#ffba43">LIFE</tspan></text>
+  <path d="M13 0v480m694-480v480" stroke="#1b2639" stroke-width="20" opacity=".28"/>
+  <circle cx="640" cy="91" r="30" fill="#ffcf59" opacity=".95"/><path d="m624 92 11 11 23-26" fill="none" stroke="#4e8d4a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
